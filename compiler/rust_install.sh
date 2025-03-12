@@ -13,12 +13,12 @@ INSTALLDIR=$SCRIPT_ROOT/install/rust-${RUST_VERSION}
 SRCDIR="rust-${RUST_VERSION}"
 
 mkdir -p $TMPDIR
-mkdir -p $PREFIX
 mkdir -p $WORKDIR
 
 cd $WORKDIR
 git clone $RUST_URL $SRCDIR
 cd $SRCDIR
+git checkout $RUST_VERSION
 
 cp config.example.toml config.toml
 
